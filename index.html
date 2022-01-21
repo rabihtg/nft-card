@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --color-softBlue: hsl(215, 51%, 70%);
+        --color-cyan: hsl(178, 100%, 50%);
+        --bg-main: hsl(217, 54%, 11%);
+        --bg-card: hsl(216, 50%, 16%);
+        --color-line: hsl(215, 32%, 27%);
+        --color-white: hsl(0, 0%, 100%);
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: var(--color-white);
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: var(--bg-main);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .card-cont {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .card {
+        padding: 1.4rem;
+        background-color: var(--bg-card);
+        border-radius: 10px;
+      }
+      .img-cont {
+        position: relative;
+      }
+      .image-overlay {
+        position: absolute;
+        cursor: pointer;
+        transition: opacity 400ms ease;
+        border-radius: 10px;
+        background-color: rgba(0, 255, 247, 0.5);
+        width: 100%;
+        height: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+      .card-image {
+        width: 300px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      .img-cont:hover .image-overlay {
+        opacity: 1;
+      }
+      .info-cont {
+        max-width: 300px;
+      }
+      .title {
+        color: var(--color-white);
+        cursor: pointer;
+        transition: 300ms ease;
+      }
+      .description {
+        color: var(--color-softBlue);
+        line-height: 1.6;
+        opacity: 0.7;
+        letter-spacing: 1px;
+      }
+      .price_date-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        border-bottom: 1px solid var(--color-line);
+      }
+      .price {
+        color: var(--color-cyan);
+      }
+      .date {
+        color: var(--color-softBlue);
+      }
+      .icon {
+        vertical-align: bottom;
+        margin-right: 3px;
+      }
+      .creator-cont {
+        display: flex;
+        align-items: center;
+      }
+      .creator-img {
+        margin-right: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--color-white);
+        width: 30px;
+      }
+      .creator-text {
+        color: var(--color-softBlue);
+        font-size: 0.9rem;
+      }
+      .author-name {
+        color: var(--color-white);
+        cursor: pointer;
+        transition: 300ms ease;
+      }
+      @media (hover: hover) {
+        .author-name:hover,
+        .title:hover {
+          color: var(--color-cyan);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Rabih Harb</a>.
+      </div>
+    </div>
+    <div class="card-cont">
+      <div class="card">
+        <div class="img-cont">
+          <div class="image-overlay">
+            <img src="images/icon-view.svg" alt="" />
+          </div>
+          <img src="images/image-equilibrium.jpg" alt="" class="card-image" />
+        </div>
+        <div class="info-cont">
+          <h2 class="title">Equilibrium #3429</h2>
+          <p class="description">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
+          <div class="price_date-cont">
+            <p class="price flex-item">
+              <img src="images/icon-ethereum.svg" alt="" class="icon" />
+              0.041ETH
+            </p>
+            <p class="date flex-item">
+              <img src="images/icon-clock.svg" alt="" class="icon" />
+              3 days left
+            </p>
+          </div>
+        </div>
+        <div class="creator-cont">
+          <img src="images/image-avatar.png" alt="" class="creator-img" />
+          <p class="creator-text">
+            Creation of <span class="author-name stand-text">Jules Wyvern</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
